@@ -1,4 +1,3 @@
- {{ partial:jumbatron }}
-<article class="mt-4 bg-white dark:bg-gray-900 p-8 shadow-xl rounded-2xl max-w-xl prose prose-slate dark:prose-invert">
-    {{ content | widont }}
-</article>
+{{ sections }}   
+  {{ partial src="partials/{type}" }}
+{{ /sections }}
