@@ -1,0 +1,38 @@
+<main class="min-h-screen max-w-6xl mx-auto py-10">
+    <h1 class="text-3xl font-semibold text-slate-800 mb-6">
+        Contact Submissions
+    </h1>
+
+    <p class="mb-6">
+        <a href="/contact-create" class="text-blue-700 hover:underline">
+            Submit a new contact
+        </a>
+    </p>
+
+    <table class="min-w-full border border-gray-200">
+        <thead class="bg-gray-100">
+        <tr>
+            <th class="py-3 px-4">Name</th>
+            <th>Email</th>
+            <th>Your Message</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{ form:submissions in="contact_us" }}
+        <tr>
+            <td class="border border-gray-200 text-center py-3">{{ name }}</td>
+            <td class="border border-gray-200 text-center">{{ email }}</td>
+            <td class="border border-gray-200 text-center">{{ your_message }}</td>
+            <td class="border border-gray-200 text-center">
+                {{ form:delete in="contact_us" }}
+                <button type="submit" class="bg-red-600 text-white px-2 py-1 rounded text-sm">
+                    Delete
+                </button>
+                {{ /form:delete }}
+            </td>
+        </tr>
+        {{ /form:submissions }}
+        </tbody>
+    </table>
+</main>

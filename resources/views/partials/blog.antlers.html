@@ -1,0 +1,32 @@
+<section class="bg-gray dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+            <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{{ blog_title }}</h2>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">{{ blog_subtitle }}</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{ card }}
+            <div
+                class="mb-10 overflow-hidden rounded-lg bg-white shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
+
+                <img src="{{ blog_card_thumbnail }}" class="h-48 w-full object-cover" />
+
+                <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
+                    <h3>
+                        <a
+                            href="{{ blog_card_link }}"
+                            class="mb-4 block text-xl font-semibold text-dark hover:text-primary sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] dark:text-white">
+                            {{ blog_card_title }}
+                        </a>
+                    </h3>
+                    <a
+                        href="{{ blog_card_link }}"
+                        class="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-dark-6">
+                        View Details
+                    </a>
+                </div>
+            </div>
+            {{ /card }}
+        </div>
+    </div>
+</section>

@@ -3,8 +3,8 @@
         {{ title }}
     </h1>
 
-    {{ form:contact_us }}
-    
+    {{ form:contact_us redirect="/contact-index" }}
+
     {{ if success }}
         <div class="p-4 mb-4 text-sm text-fg-success-strong rounded-base bg-success-soft" role="alert">
             <span class="font-medium">{{ success }}</span>
@@ -13,7 +13,7 @@
 
     <div class="max-w-sm mx-auto bg-slate-50 rounded-lg p-4">
         {{ fields }}
-        
+
         <div class="mb-5">
             {{ if type == "text" }}
                 <label for="{{ handle }}" class="block mb-2 text-sm font-medium text-gray-900 dark:text-text-white">
@@ -23,12 +23,12 @@
                     {{ /if }}
                 </label>
 
-                <input 
-                    type="{{input_type}}" 
-                    id="{{ handle }}" 
-                    name="{{ handle }}" 
+                <input
+                    type="{{input_type}}"
+                    id="{{ handle }}"
+                    name="{{ handle }}"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 p-2"
-                    placeholder="{{placeholder}}" 
+                    placeholder="{{placeholder}}"
                 />
 
                 {{ if error }}
@@ -44,10 +44,10 @@
                     {{ /if }}
                 </label>
 
-                <textarea 
-                    id="{{ handle }}" 
-                    name="{{ handle }}" 
-                    rows="4" 
+                <textarea
+                    id="{{ handle }}"
+                    name="{{ handle }}"
+                    rows="4"
                     class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body"
                     placeholder="{{placeholder}}"
                 ></textarea>
@@ -60,7 +60,7 @@
 
         {{ /fields }}
 
-        <button 
+        <button
             type="submit"
             class="bg-blue-700 text-white px-5 py-2.5 rounded-lg"
             style="background-color:blue;"
@@ -70,4 +70,9 @@
     </div>
 
     {{ /form:contact_us }}
+    <div class="mt-6 text-center">
+        <a href="/contact-index" class="text-blue-700 hover:underline">
+            Back to Contact Home
+        </a>
+    </div>
 </main>
