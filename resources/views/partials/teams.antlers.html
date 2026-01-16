@@ -3,5 +3,17 @@
         <h2 class="text-center text-lg/8 font-semibold text-gray-900 dark:text-slate-100">
             {{ teams_title }}
         </h2>
+
+        <div class="grid grid-cols-5 gap-4">
+            {{ teams_card }}
+            {{ teams_icon }}
+            <img
+                src="{{ url }}"
+                alt="{{ alt ?? '' }}"
+                class="max-h-12 w-full object-contain mt-8"
+            >
+            {{ /teams_icon }}
+            {{ /teams_card }}
+        </div>
     </div>
 </div>
